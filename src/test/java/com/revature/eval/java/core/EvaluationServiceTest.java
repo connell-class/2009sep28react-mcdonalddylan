@@ -336,7 +336,7 @@ public class EvaluationServiceTest {
 
 		assertTrue(evaluationService.isArmstrongNumber(input));
 	}
-
+	
 	@Test
 	public void noTwoDigitArmstrongNumbers() {
 		int input = 10;
@@ -521,27 +521,27 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 15
 	 ******************************************************************/
-	@Test
+	@Test //good
 	public void validIsbnNumber() {
 		assertTrue(evaluationService.isValidIsbn("3-598-21508-8"));
 	}
 
-	@Test
+	@Test 
 	public void invalidIsbnCheckDigit() {
 		assertFalse(evaluationService.isValidIsbn("3-598-21508-9"));
 	}
 
-	@Test
+	@Test //good
 	public void validIsbnNumberWithCheckDigitOfTen() {
 		assertTrue(evaluationService.isValidIsbn("3-598-21507-X"));
 	}
 
-	@Test
+	@Test //good
 	public void checkDigitIsACharacterOtherThanX() {
 		assertFalse(evaluationService.isValidIsbn("3-598-21507-A"));
 	}
 
-	@Test
+	@Test //good
 	public void invalidCharacterInIsbn() {
 		assertFalse(evaluationService.isValidIsbn("3-598-2K507-0"));
 	}
